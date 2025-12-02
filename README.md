@@ -21,24 +21,22 @@ pip install file-anonymization-sdk
 
 ### 2.2 从源码安装
 ```bash
-git clone https://github.com/yourusername/file-anonymization-sdk.git
+# 1. 克隆仓库
+git clone https://github.com/Cryptocxf/file-anonymization-sdk.git
 cd file-anonymization-sdk
-pip install -e .
-```
 
-**安装额外依赖**：
-```python
-# 中文NLP模型
+# 2. 安装依赖
+pip install -r requirements.txt
+
+# 3. 安装中文NLP模型（或者直接用已下载的zh_core_web_trfxxxx.whl安装：`pip install zh_core_web_trf-xxxx.whl）
 python -m spacy download zh_core_web_trf
 
-# Tesseract OCR（图片脱敏需要）
-# Ubuntu
-sudo apt-get install tesseract-ocr tesseract-ocr-chi-sim
+# 4. 安装Tesseract OCR来识别图片中文字
+yum install -y tesseract tesseract-langpack-chi_sim
 
-# macOS
-brew install tesseract
-
-# Windows：从 https://github.com/UB-Mannheim/tesseract/wiki 下载安装
+# 5. 安装SDK（开发模式）
+pip install -e .
+# 完成
 ```
 
 ## 3. 快速开始
