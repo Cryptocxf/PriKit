@@ -59,7 +59,7 @@ prikit api --host 0.0.0.0 --port 5000
 ```
 **方式二：python代码中使用**
 ```python
-from file_anonymizer_sdk import PDFAnonymizer
+from prikit import PDFAnonymizer
 
 # 创建脱敏器
 anonymizer = PDFAnonymizer(language='zh', verbose=True)
