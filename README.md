@@ -7,7 +7,7 @@
 - **多格式支持**：PDF、Word、Excel、图片(JPG/PNG等)、PPT
 - **多种脱敏方法**：颜色填充、字符替换、打码、伪造数据、加密
 - **中文优化**：专门优化的中文敏感信息识别（姓名、手机号、身份证号等）
-- **多种使用方式**：命令行、Python SDK、REST API
+- **多种使用方式**：命令行、Python SDK、API调用
 - **格式保留**：Word/Excel/PPT脱敏后完整保留原始格式
 - **批量处理**：支持单文件和批量文件脱敏
 - **任务管理**：完整的任务状态跟踪和进度监控
@@ -28,8 +28,11 @@ cd PriKit
 # 2. 安装依赖
 pip install -r requirements.txt
 
-# 3. 安装中文NLP模型（或者直接用已下载的zh_core_web_trfxxxx.whl安装：`pip install zh_core_web_trf-xxxx.whl）
+# 3. 安装中文NLP模型
 python -m spacy download zh_core_web_trf
+
+# 或者直接用已下载的zh_core_web_trfxxxx.whl安装
+pip install zh_core_web_trf-xxxx.whl
 
 # 4. 安装Tesseract OCR来识别图片中文字
 yum install -y tesseract tesseract-langpack-chi_sim
@@ -62,7 +65,7 @@ prikit api --host 0.0.0.0 --port 5000
 ```
 **方式二：python代码中使用**
 ```python
-from prikit import PDFAnonymizer
+from file_anonymizer_sdk import PDFAnonymizer
 
 # 创建脱敏器
 anonymizer = PDFAnonymizer(language='zh', verbose=True)
