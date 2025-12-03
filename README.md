@@ -14,12 +14,6 @@
 
 ## 2. 安装
 
-### 2.1 基础安装
-```bash
-pip install PriKit
-```
-
-### 2.2 从源码安装
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/Cryptocxf/PriKit.git
